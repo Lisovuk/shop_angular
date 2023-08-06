@@ -1,0 +1,234 @@
+
+.productItemWrapper{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: 500;  
+    margin: 2rem auto;
+}
+.goBackWrapp{
+    max-width: 1440px;
+    height: 4rem;
+    margin: 2rem 0;
+}
+.goBackBtn{
+    width: 6rem;
+    height: 2rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-color:black;
+    border-radius: 5px;
+}
+.productWrapp{
+    width: auto;
+    height: 550px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+   
+}
+img{
+    width: 420px;
+    height:550px;
+    border-radius: 10px;
+}
+.addBtnWrapp{
+    width: 60%;
+    height:550px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.description{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.description div{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.description p{
+    text-align: left;
+    margin-left: 1.1rem;
+}
+.prodName{
+   font-size: 1.4rem;
+   font-weight: 600;
+   width: 100%;
+   text-align:center;
+   padding:0 0 0 1.1rem;
+ 
+}
+
+
+.addToCart{
+    width: 12rem;
+    height: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-color:black;
+    border-radius: 5px;
+}
+
+.aboutProdInfo{
+    max-width: 1440px;
+    margin: 2rem auto;
+    height: auto;
+    text-align: justify;
+}
+h4{
+    margin: .6rem 0;
+}
+
+.aboutInfo{
+    font-weight: 300;
+}
+
+@media (min-width: 992px) and (max-width: 1440px) {
+    .productItemWrapper{
+        max-width: 1440px; 
+        margin: 2rem;
+    }
+
+    .prodName{
+       font-size: 1.2rem;
+       padding:0;
+     
+    }
+    .description {
+        justify-content: space-around;
+    }
+    .description div{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .description p{
+        text-align: left;
+        margin:0 0 2.2rem 0;
+        height: 3rem;
+    }
+    
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+.productItemWrapper{ 
+    max-width: 991px;
+    margin: 2rem;
+    
+}
+.goBackWrapp{
+    margin: 2rem 0;
+}
+
+.productWrapp{
+    height: 670px;
+   
+}
+img{
+    width: 390px;
+    height:670px;
+    margin-right: 1rem;
+}
+.addBtnWrapp{
+    height:670px;
+}
+.description{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.description div{
+    width: 40%;
+    font-size: 1rem;
+    justify-content: space-between;
+    align-items:start;
+    padding-left: .7rem;
+}
+.description p{
+    margin:0 0 2.2rem 0;
+    height: 3rem;
+}
+.prodName{
+   font-size: 1.4rem;
+   font-weight: 600;
+   width: 100%;
+   text-align:center;
+   padding:0 ;
+ 
+}
+
+
+}
+@media (min-width: 300px) and  (max-width: 767px)  {
+    .productItemWrapper{ 
+        max-width: 767px;
+        margin: 2rem auto;
+        
+    }
+    .goBackWrapp{
+        margin: 2rem auto;
+    }
+    .productWrapp{
+        height: auto;
+        flex-direction: column;   
+    }
+    img{
+        width:290px ;
+        height:480px;
+        margin-right: 0;
+    }
+    .addBtnWrapp{
+        height:auto;
+        width:80%;
+        margin: 1rem auto;
+    }
+    .description{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .description div{
+        width: 40%;
+        font-size: 1rem;
+        justify-content: space-between;
+        align-items:start;
+        padding-left: .7rem;
+    }
+    .description p{
+        margin:0 0 2.2rem 0;
+        height: 3rem;
+    }
+    .prodName{
+       font-size: 1.4rem;
+       font-weight: 600;
+       width: 100%;
+       text-align:center;
+       padding:0 ;
+     
+    }
+    .aboutProdInfo{
+        width:80%;
+        margin: 2rem auto;
+        height: auto;
+        text-align: justify;
+    }
+    h4{
+        margin: 0;
+    }
+  
+}

@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 1440px;
+}
+.wrapp{
+    display: flex;
+    justify-content: center;
+   
+}
+.filter input[type="text"] {
+  width: 320px;
+  border: none;
+  background-color: #ffffff; 
+  padding: 5px;
+  border-radius: 5px;
+  color:black; 
+  border-radius: 5px;
+  border: 1px solid black; 
+  margin: 2rem auto;
+}
+
+input ::placeholder{
+  color:black; 
+}
+
+.filter input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 3px #999999; 
+}
+
+
+.productsPageWrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  align-items: flex-start;
+}
+
+.productWrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 320px;
+  height: 570px;
+  border: 1px solid gray;
+  background-color: #cccccc72;
+  border-radius: 5px;
+}
+
+img {
+  margin-top: 1rem;
+  width: 80%;
+  height: 350px;
+}
+
+.name {
+  max-height: 4rem;
+  text-align: center;
+}
+
+.price {
+  color: black;
+}
+
+.goToProdBtn {
+  width: 80%;
+  height: 2rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  background-color: black;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1440px) {
+
+  .wrapp{
+      max-width: 1440px;
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .filter input[type="text"] {
+    max-width: 1440px;
+    margin-left: 2rem 0;
+  }
+   
+  
+  .productsPageWrapper {
+    margin: 0 auto;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+
+  .productWrapp {
+    width: 410px;
+    height: 680px;
+
+  }
+  
+  img {
+    height: 450px;
+  }
+ 
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrapp{
+      max-width: 991px;
+      margin-left: 2rem;
+  }
+  .productsPageWrapper {
+    margin: 0 2rem;
+    max-width: 991px;
+    gap: 1rem;
+  }
+
+  .productWrapp {
+    width: 320px;
+    height: 550px;
+
+  }
+  
+  img {
+    height: 350px;
+  }
+
+}
+@media (min-width: 300px) and  (max-width: 767px)  {
+  .wrapp{
+    display: flex;
+    justify-content: center;
+  }
+  .filter input[type="text"] {
+    width: 280px;
+    margin:2rem auto;
+  }
+  
+  .productsPageWrapper {
+    margin: 0;
+    max-width: 767px;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .productWrapp {
+    width: 290px;
+    height: 540px;
+
+  }
+  
+  img {
+    height: 290px;
+  }
+  
+}

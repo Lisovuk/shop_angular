@@ -1,0 +1,16 @@
+<div class="comments">
+    <div class="newComment">
+        <input type="text" [(ngModel)]="user" placeholder="Ім'я" required>
+        <input type="text" [(ngModel)]="comment" placeholder="Відгук" required>
+        <button (click)="addComment()">Додати коментар</button>
+    </div>
+
+    <div *ngFor="let comment of comments" class="comment_list ">
+        <div class="commentator">
+            <div class="commentText">{{ comment.commentator }}</div>
+        </div>
+        <div class="comment">
+            <div class="commentText">{{ processComment(comment.comment) }}</div>
+        </div>
+    </div>
+</div>

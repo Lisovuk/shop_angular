@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.wrapp {
+    height: 3rem;
+    position: sticky;
+    top: 0;
+    background-color: rgba(204, 204, 204, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; 
+    margin: 0 auto;
+  
+  }
+  
+  .headerWrapper {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+   
+   
+  }
+  .countDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; 
+  
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  .logo a{
+    padding: 0 3rem;
+  }
+  
+  .headerWrapper a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+  }
+  
+  .icon {
+    width: 30px;
+  }
+  
+  .scrolled {
+    background-color: #000000;
+  }
+  
+  .icon-white {
+    filter: invert(1);
+  }
+  .cart-count_wrapp{
+    width: 15px;
+    height: 15px; 
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .cart-count {
+    position: relative;
+    font-size: .8rem;
+ 
+  }
+
+  
+  
+  
+@media (min-width: 992px) and (max-width: 1440px) {
+
+  .headerWrapper {
+    margin: 0 2rem;
+   
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .headerWrapper {
+    max-width: 991px;
+    margin: 0 2rem;
+   
+  }
+  
+}
+@media (min-width: 300px) and  (max-width: 767px)  {
+  .headerWrapper {
+    max-width: 767px;
+    margin: 0 2rem;
+   
+  }
+  .icon {
+    width: 20px;
+  }
+  .logo {
+    width: 70px;
+  }
+  
+}
+  
+  
+  
+  

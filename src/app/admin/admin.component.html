@@ -1,0 +1,93 @@
+<div class="wrapper">
+  <div class="block">
+    <form (ngSubmit)="addProduct()" #productForm="ngForm" class="wrapper_form">
+      <div class="form-group">
+        <label for="name">Назва:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="product.name" required pattern="[^0-9]+"
+        #name="ngModel" [ngClass]="{ 'error': name.invalid && (name.dirty || productForm.submitted), 'valid': name.valid }">
+        <div *ngIf="name.invalid && (name.dirty || productForm.submitted)" class="error-message">
+          Ви ввели некоректні дані. 
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="price">Ціна:</label>
+        <input type="text" id="price" name="price" [(ngModel)]="product.price" required pattern="^[0-9]+$"
+          #price="ngModel" [ngClass]="{ 'error': price.invalid && (price.dirty || productForm.submitted), 'valid': price.valid }">
+        <div *ngIf="price.invalid && (price.dirty || productForm.submitted)" class="error-message">Введіть лише цифри</div>
+      </div>
+      
+      
+    
+      <div class="form-group">
+        <label for="size">Розмір:</label>
+        <input type="text" id="size" name="size" [(ngModel)]="product.size" required
+          #size="ngModel" [ngClass]="{ 'error': size.invalid && (size.dirty || productForm.submitted), 'valid': size.valid }">
+      </div>
+      
+    
+      <div class="form-group">
+        <label for="description">Опис:</label>
+        <textarea id="description" name="description" [(ngModel)]="product.description" required pattern="[A-Za-zА-Яа-яЁёЇїІіЄєҐґ\s\-,.]+"
+        #description="ngModel" [ngClass]="{ 'error': season.invalid && (season.dirty || productForm.submitted), 'valid': season.valid }"></textarea>
+        <div *ngIf="description.invalid && (description.dirty || productForm.submitted)" class="error-message">
+          Опис повинен містити літери, пробіли, розділові знаки 
+        </div>
+      </div>
+      
+    
+      <div class="form-group">
+        <label for="season">Сезон:</label>
+        <input type="text" id="season" name="season" [(ngModel)]="product.season" required pattern="[A-Za-zА-Яа-яЁёЇїІіЄєҐґ\s\-,.]+"
+          #season="ngModel" [ngClass]="{ 'error': season.invalid && (season.dirty || productForm.submitted), 'valid': season.valid }">
+        <div *ngIf="season.invalid && (season.dirty || productForm.submitted)" class="error-message">
+          Сезон повинен містити літери, пробіли, розділові знаки 
+        </div>
+      </div>
+      
+    
+      <div class="form-group">
+        <label for="material">Матеріал:</label>
+        <input type="text" id="material" name="material" [(ngModel)]="product.material" required pattern="[A-Za-zА-Яа-яЁёЇїІіЄєҐґ\s\-,.]+"
+          #material="ngModel" [ngClass]="{ 'error': material.invalid && (material.dirty || productForm.submitted), 'valid': material.valid }">
+        <div *ngIf="material.invalid && (material.dirty || productForm.submitted)" class="error-message">
+          Матеріал повинен містити літери, пробіли, розділові знаки 
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="color">Колір:</label>
+        <input type="text" id="color" name="color" [(ngModel)]="product.color" required pattern="[A-Za-zА-Яа-яЁёЇїІіЄєҐґ\s\-,.]+"
+          #color="ngModel" [ngClass]="{ 'error': color.invalid && (color.dirty || productForm.submitted), 'valid': color.valid }">
+        <div *ngIf="color.invalid && (color.dirty || productForm.submitted)" class="error-message">
+          Колір повинен містити літери, пропуски, розділові знаки.
+        </div>
+      </div>
+      
+    
+      <div class="form-group">
+        <label for="imageURL">URL картинки:</label>
+        <input type="text" id="imageURL" name="imageURL" [(ngModel)]="product.imageURL" required (input)="checkImageURL()">   
+         <div *ngIf="isImageLoaded === false" class="error-message">
+          Не вдалося завантажити зображення. Перевірте посилання.
+        </div>
+      </div>
+    
+      <button type="submit" [disabled]="productForm.invalid" class="btn-add">Додати</button>
+    </form>
+  </div>
+  
+  
+  <div class="block_list">
+    <div *ngFor="let product of products" class="product-card">
+      <div>
+        <img [src]="product.imageURL" alt="Product Image" width="300px" height="300px">
+      </div>
+      <p>{{ product.name}}</p>
+      <div>
+         <button (click)="removeProduct(product.id)">Видалити</button>
+      </div>
+    </div>
+  </div>
+  
+</div>

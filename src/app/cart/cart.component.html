@@ -1,0 +1,41 @@
+<div class="block">
+    <div class="wrapper">
+        <div class="block_product">
+            <div *ngIf="cart.length > 0">
+                <div class="row">
+                    <div class="product-wrapper" *ngFor="let item of cart">
+                        <div class="product col" *ngFor="let product of [item.product]">
+                            <img src={{product.imageURL}} alt="" srcset="">
+                            <span class="name">
+                                {{product.name}}
+                            </span>
+                            <span>
+                                <span class="price">{{product.price * item.count}}</span>
+                                <span class="currency">{{currency}}</span>
+                            </span>
+                            <div class="count">
+                                <button [disabled]="isMinusButtonDisabled(item.count)" (click)="decreaseCount(item.product.id,item.count)">-</button>
+                                {{item.count}}
+                                <button (click)="increaseCount(item.product.id,item.count)">+</button>
+                            </div>
+                            <div class="deleteItemWrapp">
+                                <button class="deleteItemBtn" (click)="deleteFromCart(item.product.id)">Видалити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="cart.length === 0" class="empty-cart-message">
+                Кошик пустий
+            </div>
+        </div>
+        <div class="prod__bottom">
+            <div class="prod__bottom-total">
+                <span>До оплати: {{totalPrice}} {{currency}}<span><b></b><small> </small></span> </span>
+            </div>
+            <div class="prod__bottom-button can-buy">
+                <a (click)="sendOrder()">Оформити покупку</a>
+            </div>
+        </div>
+    </div>
+</div>

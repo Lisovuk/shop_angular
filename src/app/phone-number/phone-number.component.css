@@ -1,0 +1,35 @@
+
+.tel__num{
+  margin: 0 2rem;
+
+}.link__tel__num {
+   color: black;
+   text-decoration-line: none;
+   font-size: 20px;
+   font-weight: 500;
+ }
+ 
+ .link__tel__num:hover{
+   color: red;
+ }
+ @media (min-width: 992px) and (max-width: 1440px) {
+  .tel__num{
+    margin-right: 2rem;
+  }
+  
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .tel__num{
+      margin-right: 2rem;
+    }
+  }
+  @media (min-width: 300px) and  (max-width: 767px)  {
+    .link__tel__num {
+      font-size: 15px;
+    }
+    .tel__num{
+      margin-right: 0;
+
+    }
+  }

@@ -1,0 +1,22 @@
+<div class="wrapp" [ngClass]="{'scrolled': isScrolled}">
+    <div class="headerWrapper">
+      <div>
+        <a href=""><img class="logo" src="https://vovk.com/image/catalog/logo+.png" alt="logo" ></a>
+      </div>
+      <div>
+        <a href=""><img class="icon" src="../../assets/home-sign-removebg-preview.png" alt="home_page" [ngClass]="{'icon-white': isScrolled}"></a>
+      </div>
+      <div>
+        <a href="admin"><img class="icon" src="../../assets/user-removebg-preview.png" alt="user" [ngClass]="{'icon-white': isScrolled}"></a>
+      </div>
+      <div class="countDiv">
+        <div>
+          <a href="cart"><img class="icon cart" src="../../assets/shopping-cart-removebg-preview.png" alt="icon" [ngClass]="{'icon-white': isScrolled}"></a>
+        </div>
+        <div class="cart-count_wrapp"> <span class="cart-count">{{count}}</span></div>
+      </div>
+    </div>
+
+
+  </div>
+  

@@ -1,0 +1,43 @@
+<div class="productItemWrapper" *ngIf="product">
+    <div class="goBackWrapp">
+        <button class="goBackBtn" (click)="goBack()">Назад</button>
+    </div>
+
+    <div class="productWrapp">
+        <div class="imgWrapp">
+            <img src="{{product.imageURL}}" width="200">
+        </div>
+        <div class="addBtnWrapp">
+            <p class="prodName">{{product.name}}</p>
+            <div class="description">
+                <div>
+                    <p>Колір:</p>
+                    <p>Розмір: </p>
+                    <p>Сезон: </p>
+                    <p>Матеріал: </p>
+                </div>
+                <div>
+                    <p>{{product.color}}</p>
+                    <p>{{product.size}}</p>
+                    <p>{{product.season}}</p>
+                    <p>{{product.material}}</p>
+                </div>
+            </div>
+
+            <p class="price">{{product.price}} {{currency}}</p>
+
+            <div>
+                <button class="addToCart" (click)="addToCart(product)">Додати до кошика</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="aboutProdInfo">
+        <div class="aboutInfo">
+            <h4>Про товар</h4>
+            <p>{{product.description}}</p>
+        </div>
+    </div>
+
+    <app-comments [productId]="product.id" [comments]="product.comments"></app-comments>
+</div>

@@ -1,0 +1,135 @@
+.comments {
+  margin-top: 5rem;
+}
+.comment {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #555;
+  width: 100%; /* Доданий код */
+}
+
+.newComment {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.newComment input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.newComment button {
+  width: 12rem;
+  height: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.commentator {
+  margin-bottom: 10px;
+  color: black;
+  margin-left: 1rem;
+}
+
+.commentText {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.comment {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #555;
+  margin-left: 1rem;
+}
+
+.comment_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* max-width: 1400px; */
+  border: 1px solid gray;
+  margin-bottom: 7px;
+  width: 100%; /* Доданий код */
+}
+
+@media (min-width: 992px) and (max-width: 1440px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+@media (min-width: 300px) and  (max-width: 767px)  {
+  .comments {
+    width: 80%;
+    margin: 1rem auto;
+   
+  }
+
+  .newComment {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .newComment input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 1.5rem auto;
+  }
+  
+  .newComment button {
+    width: auto;
+    margin: 1rem auto;
+  }
+  
+  .commentator {
+    margin-bottom: 20px;
+    color: black;
+    margin-left: 1rem;
+  }
+  
+  .commentText {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+  .comment {
+    margin-bottom: 20px;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+
+  }
+  
+  .comment_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+  }
+}
+
+
+
+
+
+
+
+

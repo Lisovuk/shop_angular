@@ -1,0 +1,27 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* @media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+} */
+@media (min-width: 300px) and  (max-width: 767px)  {
+    app-theme{
+        margin-right: 1rem;
+    }
+    .wrapper {
+        justify-content: center;
+    }
+}
+  

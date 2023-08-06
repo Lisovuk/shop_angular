@@ -1,0 +1,17 @@
+
+<div class="wrapp">
+    <div class="filter">
+        <input type="text" [(ngModel)]="filterValue" (input)="filterProducts()" placeholder="Знайти товар...">
+    </div>
+</div>
+
+
+
+<div class="productsPageWrapper">
+    <div *ngFor="let product of products" class="productWrapp">
+        <img src="{{product.imageURL}}" width="200">
+        <p class="name">{{product.name}}</p>
+        <p class="price">{{product.price}} {{currency}}</p>
+        <button class="goToProdBtn" (click)="goToProduct(product.id)">Переглянути</button>
+    </div>
+</div>

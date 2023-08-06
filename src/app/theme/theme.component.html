@@ -1,0 +1,11 @@
+<div class="switch">
+  <label>
+    <input type="checkbox" [(ngModel)]="darkThemeEnabled" (click)="toggleTheme()">
+    <span class="slider">
+      <span [ngClass]="{'star-left': !darkThemeEnabled, 'star-right': darkThemeEnabled}">
+        <ng-container *ngIf="darkThemeEnabled">&#9728;</ng-container>
+        <ng-container *ngIf="!darkThemeEnabled">&#9788;</ng-container>
+      </span>
+    </span>
+  </label>
+</div>
